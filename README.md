@@ -86,6 +86,21 @@ https://github.com/wilfb-debug/gcp-zero-downtime-gitops-platform
 
 ---
 
+### CreatorStore Lite – Cloud-Native Product Catalogue
+Containerised backend product catalogue platform demonstrating API development, database persistence, and Redis caching for scalable cloud-native services.
+
+Tech used:
+Go
+PostgreSQL
+Redis
+Docker
+REST APIs
+
+Repository:
+https://github.com/wilfb-debug/creatorstore-lite-gcp
+
+---
+
 ## Architecture Focus
 
 My work focuses on designing systems that are:
