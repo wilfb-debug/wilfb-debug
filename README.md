@@ -24,9 +24,10 @@ I build production-grade cloud infrastructure on Google Cloud — security autom
 
 ### 🔒 Security & Governance
 
-**[CloudGuard GCP Governance](https://github.com/wilfb-debug/cloudguard-gcp-governance)**
+**[CloudGuard GCP Governance](https://github.com/wilfb-debug/cloudguard-gcp-governance)** · [🚀 Live Demo](https://cloudguard-922790829947.europe-west2.run.app)
 [![CI](https://github.com/wilfb-debug/cloudguard-gcp-governance/actions/workflows/ci.yml/badge.svg)](https://github.com/wilfb-debug/cloudguard-gcp-governance/actions/workflows/ci.yml)
 ![Tests](https://img.shields.io/badge/tests-41_passing-brightgreen)
+![Live](https://img.shields.io/badge/deployed-Cloud_Run-4285F4?logo=googlecloud&logoColor=white)
 
 Serverless governance platform that scans GCP resources for misconfigurations, cost risks, and compliance violations. REST API with severity/category filtering, BigQuery persistence, and Looker Studio dashboarding. 4 active security/cost/governance checks — expandable rule engine.
 
