@@ -69,6 +69,6 @@ Containerised Go e-commerce backend with PostgreSQL, designed for local Docker C
 
 ## Connect
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat&logo=linkedin)](https://linkedin.com/in/wilfredballo)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat&logo=linkedin)](https://linkedin.com/in/wilfred-ballo-21b300119)
 [![GitHub](https://img.shields.io/badge/GitHub-wilfb--debug-181717?style=flat&logo=github)](https://github.com/wilfb-debug)
 
