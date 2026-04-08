@@ -2,9 +2,9 @@
 
 **Cloud Engineer · GCP · Terraform · Go · Python**
 
-I build production-grade cloud infrastructure on Google Cloud — focused on security automation, governance tooling, FinOps, and GitOps delivery pipelines. Every project here solves a real operational problem.
+I build production-grade cloud infrastructure on Google Cloud — security automation, governance tooling, FinOps, and GitOps delivery pipelines. Every project here solves a real operational problem and ships with tests.
 
-> Currently building: **[CloudGuard](https://github.com/wilfb-debug/cloudguard-gcp-governance)** — automated GCP resource governance with real-time security and cost scanning.
+> 🔨 Currently building: **[CloudGuard](https://github.com/wilfb-debug/cloudguard-gcp-governance)** — automated GCP governance platform with real-time security, cost, and compliance scanning.
 
 ---
 
@@ -12,49 +12,71 @@ I build production-grade cloud infrastructure on Google Cloud — focused on sec
 
 | Area | Tools |
 |---|---|
-| **Cloud** | GCP — Cloud Run, GKE, BigQuery, Cloud SQL, Cloud Asset Inventory, IAP, Artifact Registry |
-| **IaC** | Terraform, Kustomize |
-| **Languages** | Python, Go, HCL |
-| **CI/CD** | GitHub Actions, Cloud Build, ArgoCD |
-| **Containers** | Docker, Kubernetes |
+| **Cloud** | GCP — Cloud Run · GKE · BigQuery · Cloud SQL · Cloud Asset Inventory · IAP · Artifact Registry |
+| **IaC** | Terraform · Kustomize |
+| **Languages** | Python · Go · HCL |
+| **CI/CD** | GitHub Actions · Cloud Build · ArgoCD |
+| **Containers** | Docker · Kubernetes |
 
 ---
 
 ## Featured Projects
 
-### Security & Governance
+### 🔒 Security & Governance
+
 **[CloudGuard GCP Governance](https://github.com/wilfb-debug/cloudguard-gcp-governance)**
-Scans GCP resources for misconfigurations, cost risks, and compliance violations using Cloud Asset Inventory. Writes findings to BigQuery and surfaces them via Looker Studio.
+[![CI](https://github.com/wilfb-debug/cloudguard-gcp-governance/actions/workflows/ci.yml/badge.svg)](https://github.com/wilfb-debug/cloudguard-gcp-governance/actions/workflows/ci.yml)
+![Tests](https://img.shields.io/badge/tests-41_passing-brightgreen)
+
+Serverless governance platform that scans GCP resources for misconfigurations, cost risks, and compliance violations. REST API with severity/category filtering, BigQuery persistence, and Looker Studio dashboarding. 4 active security/cost/governance checks — expandable rule engine.
+
 `Python` `Cloud Run` `BigQuery` `Cloud Asset Inventory` `Terraform`
 
 ---
 
-### FinOps
+### 💰 FinOps
+
 **[SpendSentinel GCP Autopilot](https://github.com/wilfb-debug/spend-sentinel-gcp-autopilot)**
-Automated FinOps platform that detects idle and oversized cloud resources, surfaces cost risks to BigQuery, and enforces cleanup policies via Cloud Run services.
+
+Automated FinOps platform that continuously detects idle and oversized cloud resources, surfaces cost risks to BigQuery, and enforces cleanup policies via Cloud Run. Reduces cloud waste through scheduled detection and enforcement workflows.
+
 `Python` `Cloud Run` `Cloud Scheduler` `BigQuery` `FinOps`
 
 ---
 
-### Infrastructure & Networking
+### 🏗️ Infrastructure & Networking
+
 **[Identity-First Zero-Trust Network](https://github.com/wilfb-debug/gcp-identity-first-network-terraform)**
-Private GCP network with zero public IPs — access enforced entirely through IAM and Identity-Aware Proxy. Demonstrates least-privilege, identity-over-network security design.
-`Terraform` `IAP` `VPC` `Cloud Logging`
+[![CI](https://github.com/wilfb-debug/gcp-identity-first-network-terraform/actions/workflows/ci.yml/badge.svg)](https://github.com/wilfb-debug/gcp-identity-first-network-terraform/actions/workflows/ci.yml)
+
+Zero public IPs — access enforced entirely through IAM and Identity-Aware Proxy. Terraform-managed VPC with deny-all ingress baseline. Demonstrates identity-over-network security design with automated linting and security scanning (tflint + tfsec).
+
+`Terraform` `IAP` `VPC` `tflint` `tfsec`
 
 **[Secure Cloud Run API](https://github.com/wilfb-debug/gcp-secure-cloudrun-api)**
-Secure-by-default Flask API on Cloud Run with 4-stage modular Terraform (bootstrap → foundation → cloudrun → IAM) and full GitHub Actions CI/CD pipeline.
+[![CI](https://github.com/wilfb-debug/gcp-secure-cloudrun-api/actions/workflows/ci.yml/badge.svg)](https://github.com/wilfb-debug/gcp-secure-cloudrun-api/actions/workflows/ci.yml)
+
+Secure-by-default Flask API with 4-stage modular Terraform (bootstrap → foundation → cloudrun → IAM) and full GitHub Actions CI/CD. No public access — IAM token required for every invocation.
+
 `Python` `Terraform` `Cloud Run` `GitHub Actions`
 
 ---
 
-### Platform Engineering
+### ⚙️ Platform Engineering
+
 **[Zero-Downtime GitOps Platform](https://github.com/wilfb-debug/gcp-zero-downtime-gitops-platform)**
-Multi-environment GitOps delivery on GKE using ArgoCD and Kustomize overlays. Automated reconciliation with zero-downtime workload promotion across dev and staging.
+
+Multi-environment GitOps delivery on GKE — ArgoCD + Kustomize overlays for dev and staging. Declarative workload promotion with automated reconciliation and zero-downtime deployments.
+
 `GKE` `ArgoCD` `Kustomize` `Kubernetes`
 
 **[CreatorStore Lite](https://github.com/wilfb-debug/creatorstore-lite-gcp)**
-Containerised Go e-commerce backend with PostgreSQL, designed for local Docker Compose development and Cloud Run + Cloud SQL production deployment.
-`Go` `PostgreSQL` `Docker` `Cloud Run`
+[![CI](https://github.com/wilfb-debug/creatorstore-lite-gcp/actions/workflows/ci.yml/badge.svg)](https://github.com/wilfb-debug/creatorstore-lite-gcp/actions/workflows/ci.yml)
+![Tests](https://img.shields.io/badge/tests-14_passing-brightgreen)
+
+Production-pattern Go REST API with PostgreSQL — repository interface, connection pooling, input validation, and 14 table-driven tests with `-race` flag. Docker Compose local dev → Cloud Run + Cloud SQL production deployment path.
+
+`Go` `PostgreSQL` `Docker` `Cloud Run` `GitHub Actions`
 
 ---
 
@@ -63,7 +85,14 @@ Containerised Go e-commerce backend with PostgreSQL, designed for local Docker C
 - **Security by default** — private networks, IAM least-privilege, no public exposure without intent
 - **Everything as code** — infrastructure, policy, and configuration managed in Git
 - **FinOps-aware** — cost visibility and governance built into architecture decisions from day one
-- **Operable, not just deployable** — systems designed to be understood and maintained in production
+- **Tested before shipped** — unit tests, CI pipelines, and coverage gates on every active project
+
+---
+
+## GitHub Stats
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=wilfb-debug&show_icons=true&hide_border=true&count_private=true&theme=default)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=wilfb-debug&layout=compact&hide_border=true&theme=default)
 
 ---
 
@@ -71,4 +100,3 @@ Containerised Go e-commerce backend with PostgreSQL, designed for local Docker C
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat&logo=linkedin)](https://linkedin.com/in/wilfred-ballo-21b300119)
 [![GitHub](https://img.shields.io/badge/GitHub-wilfb--debug-181717?style=flat&logo=github)](https://github.com/wilfb-debug)
-
